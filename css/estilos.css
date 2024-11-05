@@ -1,0 +1,287 @@
+/* Orden por convención */
+/* Primero funtes */
+/* Segundo "*", que sería que se aplica a todos los selectores */
+/* Tercero selectores de eyiqueta, por ejemplo Bodyu, h1, a, etc */
+/* Cuarto selectroes de clase, atributos especificos que le agregas a las etiquetas */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Playwrite+DE+Grund:wght@100..400&display=swap');
+
+
+/*
+esto es un comentaroi¿
+reglas css::
+la manera de aplicar estilosa etiqueta html es por selectore
+selecto{
+propiedad : valo ;
+
+
+/* */
+*{
+    font-family: "Montserrat", sans-serif;
+    padding: 0;
+    margin: 0;
+
+} 
+
+body{
+    
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-size: 26px;
+    font-family: "Montserrat", cursive;
+    font-weight: 500;
+}    
+h1{
+    font-size: 35px;
+    padding: 5px 3px 5px 3px;
+    color: white ;
+
+}
+
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+/* Maquetado */
+
+
+/* Header */
+
+.headerPrincipal { 
+    background-image: url(../assets/image/grupos-de-rock.jpg);
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    
+    color: black;
+    height: 100vh; /* Altura completa de la ventana */
+}
+
+.logo{
+        img{
+            width: 100px;
+        }
+    }
+
+.contenedorPadreNav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        height: 15%;
+    }
+
+.contenedorTitulo{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 40%;
+    gap: 10px;
+    height: 85%;
+    padding-top: 2rem;
+    h1{
+        font-family: "Oswald","Playwrite DE Grund", cursive;;
+        font-size: 40px;
+        font-weight: 400;
+    }
+    h1 span {
+        font-size: 25px;
+    }
+    padding-left: 5rem;
+}
+.botonEncontranos{
+    padding: 5px;
+    margin-top: 20px;
+    border: 2px solid black;
+}
+
+.buscador{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    input{
+        padding: 3px;
+        border-radius: 5px;
+    }
+    
+}
+
+.menuPrincipal{
+    
+    display: flex;
+    flex-direction: row; 
+    list-style: none;
+    gap: 20px;
+    a:hover{
+        color: #ebbb41;
+        text-decoration: none ;
+    }
+}
+
+
+/* Main */
+
+/* nuestros productos*/
+.secProductos{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contenedorProductos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+/*
+
+
+greed
+*/
+
+.contenedorProductos div a {
+    display: flex;
+    flex-direction: column; /* Asegúra de que el texto esté en columnas */
+    align-items: center; /* Centra el contenido */
+    text-decoration: none; /* Elimina subrayado por defecto */
+}
+
+.contenedorProductos div a h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+.contenedorProductos div a h4 {
+    font-size: 15px;
+    font-weight: 200;
+    color: black;
+}
+
+.contenedorProductos div a p {
+    /* Puedes agregar estilos aquí, como color */
+    color: black; /* Cambia el color del texto del párrafo si es necesario */
+}
+
+.contenedorProductos div a:hover {
+    color: #ebbb41;
+}
+
+.contenedorProductos div {
+    background-color: #fff; /* Cambia esto al color que desees */
+    padding: 10px; /* Opcional: agrega padding interno */
+    border-radius: 5px; /* Opcional: añade bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: sombra para dar profundidad */
+}
+
+/* seccion separador envios*/
+.secSeparadorEnvios {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 20px;
+    background-color: #8694a6;
+    margin: 2rem 0px;
+    
+}
+/* sec tazas*/
+.tazas{
+    display: flex;
+    justify-content:center;
+    padding: 40px 55px; 
+    gap: 20px;
+    align-self: stretch;
+    text-decoration: underline;
+    
+}
+
+.icono1{
+    display: flex;
+    gap: 10px;
+
+
+    i{
+        font-size: 30px;
+    }
+    h3{
+        font-size: 20px;
+        
+    }
+    p{
+        font-size: 15px;
+    }
+}
+.contenidoSeccion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+ 
+}
+/*seccion separador instagram */
+.secSeparadorinsta{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+    padding: 40px 20px;
+    gap: 20px;
+    background-color: #8694a6;
+    margin: 2rem 0px;
+
+   
+}
+.tituloInsta{
+    justify-content: center;
+}
+
+
+/* Footer */
+
+.footer{
+    background-image: url(../assets/image/_Nightwish_0082.jpg);
+     background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    /*background-attachment: fixed;  Esto hace que la imagen se mantenga fija */
+    height: 100vh; /* Altura del footer para que ocupe toda la pantalla */
+    
+    ul{
+        list-style: none;
+        
+    }
+    background-color: #3a363d;
+    color:white;
+    a{
+        color: white;
+        text-decoration: none;
+        
+    }
+    a:hover{
+        color: #ebbb41;
+        text-decoration: underline;
+    }
+    .fa-whatsapp{
+        color:#4dc247
+        font-size = 64px;
+
+    }
+   
+
+}
+.gradienteColores{
+    width: 200 px   
+    height 200px;
+    background-image: linear-gradient(to right top, #b5b2cd, #babbd2, #c1c4d6, #c8cdda, #d1d5de, #cfd4da, #cdd2d7, #ccd0d3, #bfc5c7, #b3b9bb, #a7aeaf, #9ba3a2);
+}
