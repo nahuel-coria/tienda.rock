@@ -26,9 +26,7 @@ propiedad : valo ;
 
 } 
 
-body{
-    
-}
+
 
 h1,h2,h3,h4,h5,h6{
     font-size: 26px;
@@ -58,9 +56,9 @@ a{
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-size: cover; /* Hace que la imagen cubra todo el contenedor */
     background-position: center; /* Centra la imagen en el contenedor */
-    
     color: black;
     height: 100vh; /* Altura completa de la ventana */
+    
 }
 
 .logo{
@@ -245,8 +243,25 @@ greed
 .tituloInsta{
     justify-content: center;
 }
-
-
+/*contacto opiniones*/
+.nosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 40px 20px;
+    
+}
+.opiniones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 40px 20px;
+}
+    
 /* Footer */
 
 .footer{
@@ -273,8 +288,11 @@ greed
         text-decoration: underline;
     }
     .fa-whatsapp{
-        color:#4dc247
-        font-size = 64px;
+        color:rgb(78, 174, 78) !important;
+        font-size: 5em;
+        position:fixed;
+        bottom: 20px; 
+        right: 20px; 
 
     }
    
