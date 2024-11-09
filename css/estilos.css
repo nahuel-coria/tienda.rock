@@ -135,6 +135,17 @@ a{
     align-items: center;
     gap: 20px;
 }
+/* sec tazas*/
+.secProductos2{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+    
+}
+
 
 .contenedorProductos {
     display: flex;
@@ -192,16 +203,6 @@ greed
     margin: 2rem 0px;
     
 }
-/* sec tazas*/
-.tazas{
-    display: flex;
-    justify-content:center;
-    padding: 40px 55px; 
-    gap: 20px;
-    align-self: stretch;
-    text-decoration: underline;
-    
-}
 
 .icono1{
     display: flex;
@@ -244,6 +245,32 @@ greed
     justify-content: center;
 }
 /*contacto opiniones*/
+
+.contactoSec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 40px 20px;
+    h1{
+        color:black;
+
+    }
+    .contactoform{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+
+
+
+
+}
 .nosotros{
     display: flex;
     flex-direction: column;
@@ -256,7 +283,7 @@ greed
 .opiniones{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: row;
     gap: 20px;
     width: 100%;
     padding: 40px 20px;
