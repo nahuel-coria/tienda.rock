@@ -152,46 +152,41 @@ a{
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
+
+    div {
+        background-color: #fff; /* Cambia esto al color que desees */
+        padding: 10px; /* Opcional: agrega padding interno */
+        border-radius: 5px; /* Opcional: añade bordes redondeados */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: sombra para dar profundidad */
+        a {
+            display: flex;
+            flex-direction: column; /* Asegúra de que el texto esté en columnas */
+            align-items: center; /* Centra el contenido */
+            text-decoration: none; /* Elimina subrayado por defecto */
+
+            h3 {
+                font-size: 20px;
+                font-weight: 600;
+                color: black;
+            }
+            h4 {
+                font-size: 15px;
+                font-weight: 200;
+                color: black;
+            }
+            p {
+                /* Puedes agregar estilos aquí, como color */
+                color: black; /* Cambia el color del texto del párrafo si es necesario */
+            }
+            :hover {
+                color: #ebbb41;
+            }
+        }
+
+    }
+
 }
 /*
-
-
-greed
-*/
-
-.contenedorProductos div a {
-    display: flex;
-    flex-direction: column; /* Asegúra de que el texto esté en columnas */
-    align-items: center; /* Centra el contenido */
-    text-decoration: none; /* Elimina subrayado por defecto */
-}
-
-.contenedorProductos div a h3 {
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-}
-.contenedorProductos div a h4 {
-    font-size: 15px;
-    font-weight: 200;
-    color: black;
-}
-
-.contenedorProductos div a p {
-    /* Puedes agregar estilos aquí, como color */
-    color: black; /* Cambia el color del texto del párrafo si es necesario */
-}
-
-.contenedorProductos div a:hover {
-    color: #ebbb41;
-}
-
-.contenedorProductos div {
-    background-color: #fff; /* Cambia esto al color que desees */
-    padding: 10px; /* Opcional: agrega padding interno */
-    border-radius: 5px; /* Opcional: añade bordes redondeados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: sombra para dar profundidad */
-}
 
 /* seccion separador envios*/
 .secSeparadorEnvios {
@@ -264,6 +259,15 @@ greed
         gap: 20px;
         width: 100%;
         padding: 40px 20px;
+        
+        div{
+            label {
+                display: flex;
+                gap: 10px
+
+            }
+            
+        }
     }
 
 
@@ -288,7 +292,137 @@ greed
     width: 100%;
     padding: 40px 20px;
 }
+
+/*productos galeria*/
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    gap: 30px;
+    div{
+        text-align: center;
+        background-color: antiquewhites; 
+        border: 1px solid rgb(210, 203, 203);
+        color: black !important;
+        width: 300px;
+        
+        border-radius: 5px;
+        img{
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            width: 100%;
+            height: 90%;
+            object-fit: cover;
+        }
+    }
+
     
+    h1{
+        text-align: center;
+        font-size: 1 em;
+        margin: 20px;
+
+    }
+  
+
+    
+}
+   /*grilla*/
+   
+   #opiniones {
+ padding: 40px 20px;
+ text-align: center;
+}
+
+.grilla-opiniones {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grilla responsiva */
+ gap: 20px;
+ justify-items: center;
+}
+
+.tarjeta-opinion {
+ background-color: #f8f8f8;
+ padding: 20px;
+ border-radius: 8px;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+ width: 100%;
+ max-width: 300px;
+ text-align: left;
+}
+
+.tarjeta-opinion p {
+ margin: 10px 0;
+}
+
+.tarjeta-opinion em {
+ color: #ff9900;  /* Resaltar las estrellas o la calificación */
+ font-style: normal;
+}
+#faq {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .grilla-faq {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grilla responsiva */
+    gap: 20px;
+  }
+  
+  .tarjeta-faq {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+  }
+  
+  .tarjeta-faq h4 {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .tarjeta-faq p {
+    color: #666;
+  }
+  
+  .tarjeta-faq a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .tarjeta-faq a:hover {
+    text-decoration: underline;
+  }
+  
+  /* carrito*/
+  .headersecciones{
+    background-image: url(../assets/image/grupos-de-rock.jpg);
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    color: black;
+    height: 70vh; 
+    .contenedorSec{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+        justify-content: center;
+        height: 75%;
+
+        h1{
+            font-size: 2em;
+        }
+        
+        }
+  }
+
+
 /* Footer */
 
 .footer{
@@ -297,31 +431,53 @@ greed
     background-size: cover; /* Hace que la imagen cubra todo el contenedor */
     background-position: center; /* Centra la imagen en el contenedor */
     /*background-attachment: fixed;  Esto hace que la imagen se mantenga fija */
-    height: 100vh; /* Altura del footer para que ocupe toda la pantalla */
+    height: 70vh; /* Altura del footer para que ocupe toda la pantalla */
     
-    ul{
-        list-style: none;
-        
-    }
-    background-color: #3a363d;
-    color:white;
-    a{
-        color: white;
-        text-decoration: none;
-        
-    }
-    a:hover{
-        color: #ebbb41;
-        text-decoration: underline;
-    }
-    .fa-whatsapp{
-        color:rgb(78, 174, 78) !important;
-        font-size: 5em;
-        position:fixed;
-        bottom: 20px; 
-        right: 20px; 
+        .footerLogo{
+            display: flex;
+            justify-content: space-between;
+            gap: 10px; 
+            
+            padding: 30px;
 
-    }
+        .footerContenido{
+            
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 20px;
+
+            ul{
+                display: flex;
+                gap: 10px;
+                flex-direction: column;
+            }
+        }
+        }
+    
+        ul{
+            list-style: none;
+            
+        }
+        background-color: #3a363d;
+        color:white;
+        a{
+            color: white;
+            text-decoration: none;
+            
+        }
+        a:hover{
+            color: #ebbb41;
+            text-decoration: underline;
+        }
+        .fa-whatsapp{
+            color:rgb(78, 174, 78) !important;
+            font-size: 5em;
+            position:fixed;
+            bottom: 20px; 
+            right: 20px; 
+
+        }
    
 
 }
@@ -329,4 +485,9 @@ greed
     width: 200 px   
     height 200px;
     background-image: linear-gradient(to right top, #b5b2cd, #babbd2, #c1c4d6, #c8cdda, #d1d5de, #cfd4da, #cdd2d7, #ccd0d3, #bfc5c7, #b3b9bb, #a7aeaf, #9ba3a2);
+}
+@media screen and (min-width: 768px){
+
+
+
 }

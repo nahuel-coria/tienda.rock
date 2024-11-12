@@ -11,56 +11,149 @@
 </head>
 
 <body>
-    <header class="header">
-        <a href="../index.html"> <img src="../assets/image/guitarra-electrica.png" alt=""></a>
-
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./productos.html">Productos</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-                <li><a href="./carrito.html">Carrito</a></li>
-            </ul>
-        </nav>
-
-    </header>
-
-
-    <main>
-        <h1>productos</h1>
-        <section>
-            <h2>Imagenes</h2>
-            <img src="https://picsum.photos/200/300?random=1" alt="imagenes ramdon">
-            <img src="https://picsum.photos/200/300?random=2" alt="imagenes ramdon 2">
-            <img src="https://picsum.photos/200/300?random=3" alt="imagenes ramdon 3">
-            <img src="https://picsum.photos/200/300?random=4" alt="imagenes ramdon 4">
-            <img src="https://picsum.photos/200/300?random=5" alt="imagenes ramdon 5">
-            <img src="../assets/image/cat-5098930_640.jpg" alt="">
-
-        </section>
-        <section>
-            <h2>musica rock</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/3GymExBkKjE?si=NKM4eOAbGhOSGhX3"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </section>
-        <h2>video dentro del proyecto</h2>
-        <video width="100%" autoplay muted loop>
-            <source src="../assets/video/2661-161442861.mp4" type="video/mp4">
-        </video>
-        <section>
-            <a href="https://drive.google.com/file/d/11IN-DCEtIYPSkJHc1ANZl7R4o29zovAR/view">
-                <img src="./assets/image/guitarra-electrica.png" alt="">
-                <h2>Guitarra Electrica</h2>
-                <p>Precio: $1000</p>
+    <header class="headersecciones">
+        
+        <nav class="contenedorPadreNav"><!-- NAV-->
+            <a href="index.html" class="logoPrincipal">
+                <img clase="logo" src="../assets/image/Imagen1.png" alt="" width="120px">
             </a>
+            <ul class="menuPrincipal">
+                <li><a href="../index.html">Inicio1</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="">Nosotros</a></li>
+            </ul>
+            <div class="buscador">
+                <div class="input_form" id="input_buscar">
+                        <input type="text" placeholder="Buscar" required name="buscar" id="buscar">
+                </div>
+                <a href="index.html" class="logoPrincipal">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+
+            </div>
+            
+        </nav>
+        <div class="contenedorSec">
+            <h1>
+                Carrito de compras
+            </h1>
+        </div>
+
+        <!--<a href="./pages/contacto.html">ENCONTRANOS</a>-->
+    </header>
+</section>
+    <!-- <h2 >video dentro del proyecto</h2>
+    <video width="100%" autoplay muted loop>
+       <source src="../assets/video/2661-161442861.mp4" type="video/mp4">
+    </video>-->
+        <h2>Tabla de talles</h2>      
+<p>Para asegurarte de elegir el talle adecuado, consulta nuestra tabla de medidas a continuación. Recuerda que los talles pueden variar según el modelo de la prenda.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Talle</th>
+      <th>Pecho (cm)</th>
+      <th>Largo (cm)</th>
+      <th>Hombros (cm)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>S</td>
+      <td>90-95</td>
+      <td>65</td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td>M</td>
+      <td>96-100</td>
+      <td>67</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <td>L</td>
+      <td>101-105</td>
+      <td>69</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <td>XL</td>
+      <td>106-110</td>
+      <td>71</td>
+      <td>46</td>
+    </tr>
+  </tbody>
+</table>
+        <img src="../assets/image/talles remeras.jpg" alt="">
+        <h4>¿Cómo tomar tus medidas?</h4>
+<p>Para tomar tus medidas correctamente, sigue estos sencillos pasos:</p>
+<ul>
+  <li><strong>Pecho:</strong> Mide alrededor de la parte más ancha de tu pecho, manteniendo la cinta métrica cómoda pero ajustada.</li>
+  <li><strong>Largo:</strong> Mide desde el punto más alto de tu hombro hasta el final de la camiseta (o donde desees que llegue).</li>
+  <li><strong>Hombros:</strong> Mide de un extremo del hombro al otro, justo en la parte posterior de tu cuello.</li>
+</ul>
+<p>Si tienes dudas sobre qué talle elegir, no dudes en contactarnos. También puedes revisar nuestra guía de cómo tomar medidas correctamente para asegurarte de elegir el mejor ajuste para ti.</p>
+
+        
+    
+<section>
+
+    <main >
+        <section>>
+        <h1>productos</h1>
+        
+        <section class="galeria">
+            
+            <div class="itemGaleria">
+                <img src="../assets/image/Imagen de blondie 2024-11-03 a las 10.02.37_ee175f98.jpg" alt="">
+                <h2>blondie</h2>
+            </div>
+            <div class="itemGaleria">
+                <img src="../assets/image/remera fredy.jpg" alt="">
+                <h2>remera Freddy</h2>
+            </div>
+            <div class="itemGaleria">
+                <img src="../assets/image/remera gorilaz.jpg" alt="">
+                <h2>Remera gorilaz</h2>
+            </div>
+            <div class="itemGaleria">
+                <img src="../assets/image/remera grinch.jpg" alt="">
+                <h2>grinch</h2>
+            </div>
+            <div class="itemGaleria">
+                <img src="../assets/image/remera homero.jpg" alt="">
+                <h2>Remera Homero</h2>
+            </div>
+            <div class="itemGaleria">
+                <img src="../assets/image/remera payaso bart.jpg" alt="">
+                <h2>Remera Bart</h2>
+            </div>
+            <div class="itemGaleria">
+                <img src="../assets/image/remera pinki.jpg" alt="">
+                <h2>Remera Pincky,cerebo</h2>
+            </div>
+            <div class="itemGaleria">
+                <img src="../assets/image/remera the smith.jpg" alt="">
+                <h2>Remera The Smith</h2>
+            </div>
         </section>
+        <section id="descripcion-productos">
+            <h3>Detalles de las remeras</h3>
+            <p>Cada una de nuestras remeras está hecha con algodón 100% de alta calidad, proporcionando comodidad y durabilidad. Son ideales para el uso diario, con un diseño moderno y un corte que se adapta a todos los estilos. Además, están disponibles en una variedad de colores y tamaños para que encuentres la opción perfecta.</p>
+            <p>Colores disponibles: Blanco, Negro, Gris, Azul Marino, Rojo.</p>
+            <p>Composición: 100% algodón (confeccionadas con materiales sostenibles y ecológicos).</p>
+          </section>
+          
+
+           
+       
     </main>
     <footer class="footer">
 
         <!--IMAGEN DE FONDE EN EL FOOTER FOTO NIGHTWISH-->
-        <p>es to es el footer </p>
         <div>
             <a href="index.html">
                 <img clase="logo" src="./assets/image/guitarra-electrica.png" alt="">
