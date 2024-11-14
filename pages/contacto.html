@@ -13,68 +13,161 @@
 
 <body>
   <header class="headersecciones">
-        
-    <nav class="contenedorPadreNav"><!-- NAV-->
-        <a href="index.html" class="logoPrincipal">
-            <img clase="logo" src="../assets/image/Imagen1.png" alt="" width="120px">
-        </a>
-        <ul class="menuPrincipal">
-            <li><a href="../index.html">Inicio1</a></li>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="carrito.html">Carrito</a></li>
-            <li><a href="">Nosotros</a></li>
-        </ul>
-        <div class="buscador">
-            <div class="input_form" id="input_buscar">
-                    <input type="text" placeholder="Buscar" required name="buscar" id="buscar">
-            </div>
-            <a href="index.html" class="logoPrincipal">
-                <i class="fas fa-shopping-cart"></i>
-            </a>
 
+    <nav class="contenedorPadreNav"><!-- NAV-->
+      <a href="index.html" class="logoPrincipal">
+        <img clase="logo" src="../assets/image/Imagen1.png" alt="" width="120px">
+      </a>
+      <ul class="menuPrincipal">
+        <li><a href="../index.html">Inicio1</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="">Nosotros</a></li>
+      </ul>
+      <div class="buscador">
+        <div class="input_form" id="input_buscar">
+          <input type="text" placeholder="Buscar" required name="buscar" id="buscar">
         </div>
-        
+        <a href="index.html" class="logoPrincipal">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+
+      </div>
+
     </nav>
     <div class="contenedorSec">
-        <h1>
-            Carrito de compras
-        </h1>
+      <h1>
+        Carrito de compras
+      </h1>
     </div>
 
     <!--<a href="./pages/contacto.html">ENCONTRANOS</a>-->
-</header>
+  </header>
 
 
-    <main>
-        <section class="contactoSec">
-            <h1>contacto</h1>
-        <form class="contactoform">
-            <div class="input_form" id="input_nombre">
-                <label for="nombre">Nombre
-                    <input type="text" placeholder="ingrese su nombre completo" required name="nombre" id="nombre">
-                </label>
-            </div>
-            <div class="input_form" id="input_apellido">
-                <label for="apellido"> Apellido
-                    <input type="text" placeholder="ingrese su apellido" required apellido="apellido" id="apellio">
-                </label>
-            </div>
-            <div class="input_form">
-                <label for="email">Email:
-                    <input type="mail" name="email" id="email" required placeholder="ingrese un mail valido ">
-                </label>
-            </div>
-            <div class="input_form">
-                <label for="provincia">ingrese en que provincia vive:
-                    <select name="provincia" id="provincia">
-                        <option value="1">Buenos Aires</option>
-                        <option value="2" selected>Capital Federal</option>
-                    </select>
-                </label>
-            </div>
+  <main>
 
-           <!-- <div id="tipo_remera">
+
+    <section id="faq">
+      <h3>Preguntas Frecuentes</h3>
+
+      <div class="pregunta">
+        <h4>¿Cómo sé qué talla elegir?</h4>
+        <p>Puedes consultar nuestra <a href="#tabla-talles">tabla de talles</a> en la sección correspondiente para
+          encontrar las medidas exactas. Si aún tienes dudas, no dudes en contactarnos y te ayudaremos a elegir el talle
+          correcto.</p>
+      </div>
+
+      <div class="pregunta">
+        <h4>¿Puedo devolver o cambiar un producto?</h4>
+        <p>Sí, ofrecemos una política de devoluciones y cambios dentro de los 30 días posteriores a la compra, siempre y
+          cuando la prenda esté sin usar y en su estado original (con etiquetas). Si deseas realizar un cambio o
+          devolución, por favor revisa nuestra sección de <a href="#politica-devoluciones">Política de devoluciones</a>.
+        </p>
+      </div>
+
+      <div class="pregunta">
+        <h4>¿Cómo puedo hacer una compra?</h4>
+        <p>Para hacer una compra, solo tienes que seguir estos pasos:
+        <ol>
+          <li>Añadir los productos que te interesan al carrito.</li>
+          <li>Dirígete a la página de pago.</li>
+          <li>Ingresa tus datos de envío y selecciona el método de pago que prefieras.</li>
+          <li>Confirma tu compra y espera la confirmación por correo electrónico.</li>
+        </ol>
+        </p>
+      </div>
+
+      <div class="pregunta">
+        <h4>¿Cuál es el costo de envío?</h4>
+        <p>El costo de envío depende de tu ubicación. Ofrecemos envíos nacionales e internacionales. Al realizar el
+          pedido, podrás ver el costo exacto antes de completar la compra. ¡También tenemos promociones de envío
+          gratuito por compras superiores a un monto específico!</p>
+      </div>
+
+      <div class="pregunta">
+        <h4>¿Cómo sé si mi pedido ha sido enviado?</h4>
+        <p>Después de que tu pedido sea enviado, recibirás un correo electrónico con un número de seguimiento. Puedes
+          usar este número para rastrear el estado de tu envío en la página de nuestro transportista.</p>
+      </div>
+
+      <div class="pregunta">
+        <h4>¿Puedo cancelar o modificar mi pedido después de haberlo realizado?</h4>
+        <p>Los pedidos se procesan rápidamente, por lo que no siempre es posible hacer cambios o cancelaciones una vez
+          que el pedido ha sido confirmado. Si necesitas realizar algún cambio, por favor contáctanos lo antes posible a
+          través de nuestro servicio de atención al cliente.</p>
+      </div>
+
+      <div class="pregunta">
+        <h4>¿Puedo realizar un pedido sin crear una cuenta?</h4>
+        <p>Sí, puedes realizar una compra como invitado sin necesidad de crear una cuenta. Sin embargo, te recomendamos
+          registrarte para disfrutar de beneficios exclusivos como el seguimiento de tus pedidos, historial de compras y
+          descuentos en futuras compras.</p>
+      </div>
+
+      <div class="pregunta">
+        <h4>¿Aceptan pagos internacionales?</h4>
+        <p>Sí, aceptamos pagos internacionales a través de tarjetas de crédito/débito y plataformas de pago como PayPal.
+          Si tienes algún problema con el pago, por favor contáctanos.</p>
+      </div>
+
+      <div class="pregunta">
+        <h4>¿Las remeras se encogen al lavarlas?</h4>
+        <p>Nuestras remeras están hechas con materiales de alta calidad (principalmente algodón), por lo que pueden
+          encoger un poco después del primer lavado. Te recomendamos seguir las instrucciones de lavado en la etiqueta
+          para asegurarte de que tu prenda dure mucho tiempo en buen estado.</p>
+      </div>
+
+      <div class="pregunta">
+        <h4>¿Puedo personalizar las remeras?</h4>
+        <p>Actualmente no ofrecemos personalización directa de nuestras remeras, pero estamos considerando agregar esta
+          opción en el futuro. ¡Síguenos en redes sociales para estar al tanto de nuestras novedades!</p>
+      </div>
+
+      <div class="pregunta">
+        <h4>¿Qué pasa si un producto que quiero está agotado?</h4>
+        <p>Si el producto que te interesa está agotado, puedes suscribirte a nuestra lista de espera o dejarnos tu
+          correo electrónico para que te notifiquemos cuando vuelva a estar disponible. ¡Nos aseguramos de reponer
+          nuestros productos lo más rápido posible!</p>
+      </div>
+
+      <div class="pregunta">
+        <h4>¿Cómo puedo ponerme en contacto con el servicio de atención al cliente?</h4>
+        <p>Puedes ponerte en contacto con nosotros a través de nuestro formulario de contacto, enviando un correo
+          electrónico a <a </section>
+      </div>
+    </section>
+
+
+    <section class="contactoSec">
+      <h1>contacto</h1>
+      <form class="contactoform">
+        <div class="input_form" id="input_nombre">
+          <label for="nombre">Nombre
+            <input type="text" placeholder="ingrese su nombre completo" required name="nombre" id="nombre">
+          </label>
+        </div>
+        <div class="input_form" id="input_apellido">
+          <label for="apellido"> Apellido
+            <input type="text" placeholder="ingrese su apellido" required apellido="apellido" id="apellio">
+          </label>
+        </div>
+        <div class="input_form">
+          <label for="email">Email:
+            <input type="mail" name="email" id="email" required placeholder="ingrese un mail valido ">
+          </label>
+        </div>
+        <div class="input_form">
+          <label for="provincia">ingrese en que provincia vive:
+            <select name="provincia" id="provincia">
+              <option value="1">Buenos Aires</option>
+              <option value="2" selected>Capital Federal</option>
+            </select>
+          </label>
+        </div>
+
+        <!-- <div id="tipo_remera">
                 <h2>Elija qué tipo de estilo de remera desea</h2>
                 <label for="rock-hombre">
                     <input type="radio" name="estilo-de-remera" id="rock-hombre" value="rock Hombre">
@@ -86,218 +179,66 @@
                 </label>
             </div>
             -->
-            <div>
-                <input type="reset" value="Limpiar formulario">
-                <input type="submit" value=" enviar formulario">
-            </div>
-        </form>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26255.395875480262!2d-58.562688825683615!3d-34.65660999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc858c328febf%3A0x339e368189ea0fa6!2sAvenida%20Emilio%20Castro%2C%207614!5e0!3m2!1ses-419!2sar!4v1728946330121!5m2!1ses-419!2sar"
-            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-
-        </section>
-        
-
-        <section class="nosotros">
-            <h2>quienes somos</h2>
-            <img src="../assets/image/nosotros.avif" alt="equipo de trabajo">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, eveniet laborum officia inventore nam porro impedit voluptatibus perspiciatis quas libero nemo laboriosam enim omnis nesciunt ex beatae modi magni reprehenderit.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio impedit velit sequi neque? Laboriosam dolore iste mollitia voluptatum amet fugit accusantium consectetur, qui nesciunt! Quos modi quibusdam necessitatibus pariatur debitis.
-            </p>
-        </section>
-
-        <section class ="opiniones"> 
-            
-                <h3>Nuestros clientes hablan por nosotros</h3>
-            
-                    <div >
-                      <p><strong>Mariana G.</strong> - <em>5 estrellas</em></p>
-                      <img src="../assets/image/personaopi.jpg" alt="foto ">
-                      <p>"Me encantó la calidad de la tela y el diseño. Las remeras son súper cómodas y se ajustan perfectamente. ¡Sin duda compraré más!"</p>
-                    </div>
-                    <div class="reseña">
-                      <p><strong>Juan P.</strong> - <em>4 estrellas</em></p>
-                      <img src="../assets/image/personaopi.jpg" alt="foto ">
-                      <p>"La talla M me quedó genial. El color es tal cual lo esperaba, y la entrega fue rápida. Recomendado."</p>
-                    </div>
-  
-            </section>
-           
-            
-        </section>
-       
-        <section id="faq">
-            <h3>Preguntas Frecuentes</h3>
-            
-            <div class="pregunta">
-              <h4>¿Cómo sé qué talla elegir?</h4>
-              <p>Puedes consultar nuestra <a href="#tabla-talles">tabla de talles</a> en la sección correspondiente para encontrar las medidas exactas. Si aún tienes dudas, no dudes en contactarnos y te ayudaremos a elegir el talle correcto.</p>
-            </div>
-            
-            <div class="pregunta">
-              <h4>¿Puedo devolver o cambiar un producto?</h4>
-              <p>Sí, ofrecemos una política de devoluciones y cambios dentro de los 30 días posteriores a la compra, siempre y cuando la prenda esté sin usar y en su estado original (con etiquetas). Si deseas realizar un cambio o devolución, por favor revisa nuestra sección de <a href="#politica-devoluciones">Política de devoluciones</a>.</p>
-            </div>
-            
-            <div class="pregunta">
-              <h4>¿Cómo puedo hacer una compra?</h4>
-              <p>Para hacer una compra, solo tienes que seguir estos pasos:
-                <ol>
-                  <li>Añadir los productos que te interesan al carrito.</li>
-                  <li>Dirígete a la página de pago.</li>
-                  <li>Ingresa tus datos de envío y selecciona el método de pago que prefieras.</li>
-                  <li>Confirma tu compra y espera la confirmación por correo electrónico.</li>
-                </ol>
-              </p>
-            </div>
-            
-            <div class="pregunta">
-              <h4>¿Cuál es el costo de envío?</h4>
-              <p>El costo de envío depende de tu ubicación. Ofrecemos envíos nacionales e internacionales. Al realizar el pedido, podrás ver el costo exacto antes de completar la compra. ¡También tenemos promociones de envío gratuito por compras superiores a un monto específico!</p>
-            </div>
-            
-            <div class="pregunta">
-              <h4>¿Cómo sé si mi pedido ha sido enviado?</h4>
-              <p>Después de que tu pedido sea enviado, recibirás un correo electrónico con un número de seguimiento. Puedes usar este número para rastrear el estado de tu envío en la página de nuestro transportista.</p>
-            </div>
-            
-            <div class="pregunta">
-              <h4>¿Puedo cancelar o modificar mi pedido después de haberlo realizado?</h4>
-              <p>Los pedidos se procesan rápidamente, por lo que no siempre es posible hacer cambios o cancelaciones una vez que el pedido ha sido confirmado. Si necesitas realizar algún cambio, por favor contáctanos lo antes posible a través de nuestro servicio de atención al cliente.</p>
-            </div>
-          
-            <div class="pregunta">
-              <h4>¿Puedo realizar un pedido sin crear una cuenta?</h4>
-              <p>Sí, puedes realizar una compra como invitado sin necesidad de crear una cuenta. Sin embargo, te recomendamos registrarte para disfrutar de beneficios exclusivos como el seguimiento de tus pedidos, historial de compras y descuentos en futuras compras.</p>
-            </div>
-          
-            <div class="pregunta">
-              <h4>¿Aceptan pagos internacionales?</h4>
-              <p>Sí, aceptamos pagos internacionales a través de tarjetas de crédito/débito y plataformas de pago como PayPal. Si tienes algún problema con el pago, por favor contáctanos.</p>
-            </div>
-          
-            <div class="pregunta">
-              <h4>¿Las remeras se encogen al lavarlas?</h4>
-              <p>Nuestras remeras están hechas con materiales de alta calidad (principalmente algodón), por lo que pueden encoger un poco después del primer lavado. Te recomendamos seguir las instrucciones de lavado en la etiqueta para asegurarte de que tu prenda dure mucho tiempo en buen estado.</p>
-            </div>
-          
-            <div class="pregunta">
-              <h4>¿Puedo personalizar las remeras?</h4>
-              <p>Actualmente no ofrecemos personalización directa de nuestras remeras, pero estamos considerando agregar esta opción en el futuro. ¡Síguenos en redes sociales para estar al tanto de nuestras novedades!</p>
-            </div>
-          
-            <div class="pregunta">
-              <h4>¿Qué pasa si un producto que quiero está agotado?</h4>
-              <p>Si el producto que te interesa está agotado, puedes suscribirte a nuestra lista de espera o dejarnos tu correo electrónico para que te notifiquemos cuando vuelva a estar disponible. ¡Nos aseguramos de reponer nuestros productos lo más rápido posible!</p>
-            </div>
-          
-            <div class="pregunta">
-              <h4>¿Cómo puedo ponerme en contacto con el servicio de atención al cliente?</h4>
-              <p>Puedes ponerte en contacto con nosotros a través de nuestro formulario de contacto, enviando un correo electrónico a <a
-         </section>
- <!--grilla-->
- <section id="opiniones">
-    <h3>Lo que dicen nuestros clientes</h3>
-    <div class="grilla-opiniones">
-      <div class="tarjeta-opinion">
-        <p><strong>Mariana G.</strong> - <em>5 estrellas</em></p>
-        <p>"Me encantó la calidad de la tela y el diseño. Las remeras son súper cómodas y se ajustan perfectamente. ¡Sin duda compraré más!"</p>
-      </div>
-      <div class="tarjeta-opinion">
-        <p><strong>Juan P.</strong> - <em>4 estrellas</em></p>
-        <p>"La talla M me quedó genial. El color es tal cual lo esperaba, y la entrega fue rápida. Recomendado."</p>
-      </div>
-      <div class="tarjeta-opinion">
-        <p><strong>Ana S.</strong> - <em>5 estrellas</em></p>
-        <p>"Excelente producto. La calidad es impresionante, el color se mantiene incluso después de varios lavados."</p>
-      </div>
-      <div class="tarjeta-opinion">
-        <p><strong>Carlos L.</strong> - <em>4 estrellas</em></p>
-        <p>"Muy contento con la compra. El proceso fue fácil, aunque el envío tardó un poco más de lo esperado."</p>
-      </div>
-    </div>
-  </section>
-
-
-</style>  
-<section id="faq">
-    <h3>Preguntas Frecuentes</h3>
-    <div class="grilla-faq">
-      <div class="tarjeta-faq">
-        <h4>¿Cómo sé qué talla elegir?</h4>
-        <p>Puedes consultar nuestra <a href="#tabla-talles">tabla de talles</a> para encontrar las medidas exactas. Si tienes dudas, contáctanos y te ayudamos.</p>
-      </div>
-      <div class="tarjeta-faq">
-        <h4>¿Puedo devolver o cambiar un producto?</h4>
-        <p>Sí, ofrecemos devoluciones dentro de los 30 días, siempre que el producto esté en su estado original.</p>
-      </div>
-      <div class="tarjeta-faq">
-        <h4>¿Cuál es el costo de envío?</h4>
-        <p>El costo varía según tu ubicación. Ofrecemos envíos gratuitos en compras mayores a un monto específico.</p>
-      </div>
-      <div class="tarjeta-faq">
-        <h4>¿Puedo pagar con PayPal?</h4>
-        <p>Sí, aceptamos PayPal, tarjetas de crédito y otras formas de pago seguras.</p>
-      </div>
-    </div>
-  </section>
-  <style>
- 
-  </style>
-  
-    
-    
-
-
-    </main>
-
-
-    <footer class="footer">
         <div>
-            <a href="index.html">
-                <img clase="logo" src="./assets/image/guitarra-electrica.png" alt="">
+          <input type="reset" value="Limpiar formulario">
+          <input type="submit" value=" enviar formulario">
+        </div>
+      </form>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26255.395875480262!2d-58.562688825683615!3d-34.65660999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc858c328febf%3A0x339e368189ea0fa6!2sAvenida%20Emilio%20Castro%2C%207614!5e0!3m2!1ses-419!2sar!4v1728946330121!5m2!1ses-419!2sar"
+        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+
+    </section>
+
+
+  </main>
+
+
+  <footer class="footer">
+    <div>
+      <a href="index.html">
+        <img clase="logo" src="./assets/image/guitarra-electrica.png" alt="">
+      </a>
+
+      <nav>
+        <h3>Contenidos</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="./pages/productos.html">Productos</a></li>
+          <li><a href="./pages/contacto.html">Contacto</a></li>
+          <li><a href="./pages/carrito.html">Carrito</a></li>
+          <li><a href="">Nosotros</a></li>
+          <li><a href="https://www.google.co.uk/" target="_blank">google</a></li>
+        </ul>
+      </nav>
+      <nav>
+
+        <ul>
+          <li><a href="#">-Preguntas frecuentes</a></li>
+          <li><a href="#">avisdo de privacidad</a></li>
+          <li><a href="#">Terminos y condiciones</a></li>
+        </ul>
+        <div>
+          <h3> SUSCRIBITE A NUESTRO NEWLETTER</h3>
+          <form action="">
+            <input type="email" placeholder="TU EMAIL" id="emailsuscripcion " name="emailsuscripcion">
+            <input type="submit" value="SUSCRIBIRME">
+          </form>
+          <div>
+            <h3>conectate con Nosotros</h3>
+
+            <a href="https://web.whatsapp.com/" target="_blank"></a>
+            <i class="fa-brands fa-whatsapp"></i>
             </a>
+            <a href="https://www.instagram.com/" target=_blank>
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <p>&copy;2024 Tienda Rock. Todos los derechos recervados</p>
+          </div>
 
-            <nav>
-                <h3>Contenidos</h3>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="./pages/productos.html">Productos</a></li>
-                    <li><a href="./pages/contacto.html">Contacto</a></li>
-                    <li><a href="./pages/carrito.html">Carrito</a></li>
-                    <li><a href="">Nosotros</a></li>
-                    <li><a href="https://www.google.co.uk/" target="_blank">google</a></li>
-                </ul>
-            </nav>
-            <nav>
-
-                <ul>
-                    <li><a href="#">-Preguntas frecuentes</a></li>
-                    <li><a href="#">avisdo de privacidad</a></li>
-                    <li><a href="#">Terminos y condiciones</a></li>
-                </ul>
-                <div>
-                    <h3> SUSCRIBITE A NUESTRO NEWLETTER</h3>
-                    <form action="">
-                        <input type="email" placeholder="TU EMAIL" id="emailsuscripcion " name="emailsuscripcion">
-                        <input type="submit" value="SUSCRIBIRME">
-                    </form>
-                    <div>
-                        <h3>conectate con Nosotros</h3>
-
-                        <a href="https://web.whatsapp.com/" target="_blank"></a>
-                        <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-                        <a href="https://www.instagram.com/" target=_blank>
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <p>&copy;2024 Tienda Rock. Todos los derechos recervados</p>
-                    </div>
-
-    </footer>
+  </footer>
 </body>
 
 </html>

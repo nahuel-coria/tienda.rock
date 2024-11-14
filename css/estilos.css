@@ -194,7 +194,7 @@ a{
     justify-content: center;
     padding: 40px 20px;
     gap: 20px;
-    background-color: #8694a6;
+    background-color: #91b88c;
     margin: 2rem 0px;
     
 }
@@ -223,6 +223,87 @@ a{
     width: 100%;
  
 }
+/* Estilos generales para la sección de FAQ */
+#faq {
+    background-color: #f9f9f9; /* Fondo claro */
+    padding: 30px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    margin: 50px 0;
+  }
+  
+  /* Título principal */
+  #faq h3 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+  
+  /* Estilos para cada pregunta */
+  .pregunta {
+    margin-bottom: 20px;
+  }
+  
+  /* Caja que rodea cada pregunta (tarjeta) */
+  .caja {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra más prominente */
+    border-left: 5px solid #007bff; /* Línea de color a la izquierda para resaltar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Estilo al pasar el mouse sobre la caja */
+  .caja:hover {
+    transform: translateY(-5px); /* Eleva ligeramente la caja al pasar el ratón */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra más prominente al hover */
+  }
+  
+  /* Estilo para los títulos de las preguntas dentro de la caja */
+  .caja h4 {
+    font-size: 1.2em;
+    color: #007bff; /* Color azul para los títulos de las preguntas */
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  /* Estilo al hacer hover sobre el título de la pregunta */
+  .caja h4:hover {
+    color: #0056b3; /* Azul más oscuro al pasar el cursor */
+  }
+  
+  /* Estilo para las respuestas dentro de las cajas */
+  .caja p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para listas dentro de las respuestas */
+  .caja ol {
+    margin-left: 20px;
+  }
+  
+  .caja ol li {
+    margin-bottom: 5px;
+  }
+  
+  /* Enlaces dentro de las respuestas */
+  .caja a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .caja a:hover {
+    text-decoration: underline;
+  }
+  
 /*seccion separador instagram */
 .secSeparadorinsta{
     display: flex;
@@ -231,7 +312,7 @@ a{
     
     padding: 40px 20px;
     gap: 20px;
-    background-color: #8694a6;
+    background-color: #91a0b3;
     margin: 2rem 0px;
 
    
@@ -422,16 +503,64 @@ a{
         }
   }
 
+/*Tabla talles*/
+.tablaTalles{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+
+
+        .separadorTablaTalles{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+            align-items: center;
+            background-color:#91b88c;
+            padding: 20px 10px;
+            margin: 20px 0;
+
+            p{
+                color: white;
+                font-size: 1em;
+                width: 50%;
+            }
+
+        }
+
+        .textoSepadorTalles{
+            width: 60%;
+            font-weight: 700; /*modificar*/
+        }
+
+}
+
+.secProdu{
+    h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0;
+        color: black;
+        font-size: 2em;
+
+    }
+}
 
 /* Footer */
 
 .footer{
     background-image: url(../assets/image/_Nightwish_0082.jpg);
-     background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-size: cover; /* Hace que la imagen cubra todo el contenedor */
-    background-position: center; /* Centra la imagen en el contenedor */
+    
+    background-position: center -500px; 
     /*background-attachment: fixed;  Esto hace que la imagen se mantenga fija */
-    height: 70vh; /* Altura del footer para que ocupe toda la pantalla */
+    height: 43vh; /* Altura del footer para que ocupe toda la pantalla */
     
         .footerLogo{
             display: flex;
@@ -440,8 +569,21 @@ a{
             
             padding: 30px;
 
-        .footerContenido{
-            
+            .footerContenido{
+                
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 20px;
+
+                ul{
+                    display: flex;
+                    gap: 10px;
+                    flex-direction: column;
+                }
+            }
+        }
+        .footerAyuda{
             display: flex;
             flex-direction: column;
             align-items: start;
@@ -453,6 +595,29 @@ a{
                 flex-direction: column;
             }
         }
+        .footerSuscrib{
+            display: flex;
+            flex-direction: column;
+            
+            
+            align-items: center;
+            gap: 20px;
+
+        }
+        .footerNosotros{
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            gap: 20px;
+            justify-content: center;
+            width: 100%;
+            
+
+                a{
+                   i{
+                    font-size: 2rem;
+                   }
+                }
         }
     
         ul{
@@ -477,6 +642,10 @@ a{
             bottom: 20px; 
             right: 20px; 
 
+        }
+        .footerCopy{
+            display: flex;
+            justify-content: center;
         }
    
 
