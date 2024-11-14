@@ -223,6 +223,7 @@ a{
     width: 100%;
  
 }
+
 /* Estilos generales para la sección de FAQ */
 #faq {
     background-color: #f9f9f9; /* Fondo claro */
@@ -303,7 +304,78 @@ a{
   .caja a:hover {
     text-decoration: underline;
   }
-  
+  #faq {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 50px 0;
+  }
+
+  /* Título principal */
+  #faq h3 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+
+  /* Estilos para cada pregunta */
+  .pregunta {
+    margin-bottom: 20px;
+  }
+
+  /* Caja que rodea cada pregunta (tarjeta) */
+  .caja {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #007bff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Estilo al pasar el mouse sobre la caja */
+  .caja:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Estilo para los títulos de las preguntas dentro de la caja */
+  .caja h4 {
+    font-size: 1.2em;
+    color: #007bff;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  /* Estilo al hacer hover sobre el título de la pregunta */
+  .caja h4:hover {
+    color: #0056b3;
+  }
+
+  /* Estilo para las respuestas dentro de las cajas */
+  .caja p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+  /* Estilo para enlaces dentro de las respuestas */
+  .caja a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .caja a:hover {
+    text-decoration: underline;
+  }
+
+
 /*seccion separador instagram */
 .secSeparadorinsta{
     display: flex;
