@@ -42,7 +42,6 @@ h1{
 
 
 a{
-    color: black;
     text-decoration: none;
 }
 
@@ -52,11 +51,11 @@ a{
 /* Header */
 
 .headerPrincipal { 
-    background-image: url(../assets/image/grupos-de-rock.jpg);
+    background-image: url(../assets/image/image.webp);
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-size: cover; /* Hace que la imagen cubra todo el contenedor */
     background-position: center; /* Centra la imagen en el contenedor */
-    color: black;
+    color: white;
     height: 100vh; /* Altura completa de la ventana */
     
 }
@@ -72,9 +71,23 @@ a{
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 20px;
+        padding: 20px 60px;
         height: 15%;
     }
+
+    /* Estilo del nav al hacer scroll */
+.navFijo {
+    position: fixed; /* Fija el nav en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* Aplica el desenfoque en el fondo */
+    transition: background-color 0.3s ease; /* Transición suave */
+    z-index: 1000;
+}
+
+
 
 .contenedorTitulo{
     display: flex;
@@ -90,24 +103,46 @@ a{
         font-weight: 400;
     }
     h1 span {
-        font-size: 25px;
+        font-size: 31px;
+    }
+    h1 div {
+        color: #ebbb41;
+        font-size: 45px;
     }
     padding-left: 5rem;
+
+
 }
 .botonEncontranos{
-    padding: 5px;
+    padding: 15px;
     margin-top: 20px;
-    border: 2px solid black;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;   
+}
+
+.botonEncontranos:hover{
+    color: #ebbb41;
+    border: 2px solid #ebbb41;
 }
 
 .buscador{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
+    padding-right: 6rem;
+    
+    a i{
+        color: white;
+        font-size: 1.7rem;
+    }
     input{
         padding: 3px;
         border-radius: 5px;
+    }
+    a i:hover{
+        color: #ebbb41;
     }
     
 }
@@ -117,7 +152,11 @@ a{
     display: flex;
     flex-direction: row; 
     list-style: none;
-    gap: 20px;
+    gap: 35px;
+    color: white;
+    font-size: 20px;
+    li a{
+        color: white;   }
     a:hover{
         color: #ebbb41;
         text-decoration: none ;
@@ -129,11 +168,18 @@ a{
 
 /* nuestros productos*/
 .secProductos{
+    margin-top: 3rem;
     padding-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+
+        h2{
+            font-size: 32px;
+            font-weight: 500;
+            color: #333333;
+        }
 }
 /* sec tazas*/
 .secProductos2{
@@ -154,15 +200,15 @@ a{
     padding: 20px;
 
     div {
-        background-color: #fff; /* Cambia esto al color que desees */
-        padding: 10px; /* Opcional: agrega padding interno */
-        border-radius: 5px; /* Opcional: añade bordes redondeados */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: sombra para dar profundidad */
+        background-color: #fff; 
+        padding: 10px; 
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
         a {
             display: flex;
-            flex-direction: column; /* Asegúra de que el texto esté en columnas */
-            align-items: center; /* Centra el contenido */
-            text-decoration: none; /* Elimina subrayado por defecto */
+            flex-direction: column;
+            align-items: center; 
+            text-decoration: none; 
 
             h3 {
                 font-size: 20px;
@@ -175,8 +221,8 @@ a{
                 color: black;
             }
             p {
-                /* Puedes agregar estilos aquí, como color */
-                color: black; /* Cambia el color del texto del párrafo si es necesario */
+              
+                color: black; 
             }
             :hover {
                 color: #ebbb41;
@@ -194,8 +240,14 @@ a{
     justify-content: center;
     padding: 40px 20px;
     gap: 20px;
-    background-color: #91b88c;
+    background-color: #333333;
     margin: 2rem 0px;
+    color: white;
+
+
+        a{
+            color: white !important;
+        }
     
 }
 
@@ -224,12 +276,11 @@ a{
  
 }
 
-/* Estilos generales para la sección de FAQ */
 #faq {
-    background-color: #f9f9f9; /* Fondo claro */
+    background-color: #f9f9f9; 
     padding: 30px;
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
     margin: 50px 0;
   }
   
@@ -252,21 +303,21 @@ a{
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra más prominente */
-    border-left: 5px solid #007bff; /* Línea de color a la izquierda para resaltar */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #007bff; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  /* Estilo al pasar el mouse sobre la caja */
+  
   .caja:hover {
-    transform: translateY(-5px); /* Eleva ligeramente la caja al pasar el ratón */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra más prominente al hover */
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
   }
   
   /* Estilo para los títulos de las preguntas dentro de la caja */
   .caja h4 {
     font-size: 1.2em;
-    color: #007bff; /* Color azul para los títulos de las preguntas */
+    color: #007bff; 
     margin-bottom: 10px;
     cursor: pointer;
     font-weight: 500;
@@ -275,7 +326,7 @@ a{
   
   /* Estilo al hacer hover sobre el título de la pregunta */
   .caja h4:hover {
-    color: #0056b3; /* Azul más oscuro al pasar el cursor */
+    color: #0056b3; 
   }
   
   /* Estilo para las respuestas dentro de las cajas */
@@ -423,10 +474,6 @@ a{
         }
     }
 
-
-
-
-
 }
 .nosotros{
     display: flex;
@@ -509,7 +556,7 @@ a{
 }
 
 .tarjeta-opinion em {
- color: #ff9900;  /* Resaltar las estrellas o la calificación */
+ color: #ff9900;  
  font-style: normal;
 }
 #faq {
@@ -519,7 +566,7 @@ a{
   
   .grilla-faq {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grilla responsiva */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
     gap: 20px;
   }
   
@@ -554,10 +601,10 @@ a{
   
   /* carrito*/
   .headersecciones{
-    background-image: url(../assets/image/grupos-de-rock.jpg);
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
-    background-position: center; /* Centra la imagen en el contenedor */
+    background-image: url(../assets/image/foto\ fondo\ carrito.jpg);
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center;
     color: black;
     height: 70vh; 
     .contenedorSec{
@@ -626,13 +673,13 @@ a{
 /* Footer */
 
 .footer{
-    background-image: url(../assets/image/_Nightwish_0082.jpg);
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-image: url(../assets/image/imgfooter.webp);
+    background-repeat: no-repeat; 
+    background-size: cover;
     
-    background-position: center -500px; 
+    background-position: center -600px; 
     /*background-attachment: fixed;  Esto hace que la imagen se mantenga fija */
-    height: 43vh; /* Altura del footer para que ocupe toda la pantalla */
+    height: 40vh; /* Altura del footer para que ocupe toda la pantalla */
     
         .footerLogo{
             display: flex;
@@ -725,7 +772,7 @@ a{
 .gradienteColores{
     width: 200 px   
     height 200px;
-    background-image: linear-gradient(to right top, #b5b2cd, #babbd2, #c1c4d6, #c8cdda, #d1d5de, #cfd4da, #cdd2d7, #ccd0d3, #bfc5c7, #b3b9bb, #a7aeaf, #9ba3a2);
+    /*background-image: linear-gradient(to right top, #b5b2cd, #babbd2, #c1c4d6, #c8cdda, #d1d5de, #cfd4da, #cdd2d7, #ccd0d3, #bfc5c7, #b3b9bb, #a7aeaf, #9ba3a2);*/
 }
 @media screen and (min-width: 768px){
 

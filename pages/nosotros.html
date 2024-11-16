@@ -1,11 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotroa</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tienda rock</title>
+  <link rel="shortcut icon" href="./assets/image/Logo tienda_rock(1).png" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/334fa7f754.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/estilos.css">
 </head>
+
+
 <body>
+  <header class="headersecciones">
+
+    <nav class="contenedorPadreNav"><!-- NAV-->
+      <a href="index.html" class="logoPrincipal">
+        <img clase="logo" src="../assets/image/Imagen1.png" alt="" width="120px">
+      </a>
+      <ul class="menuPrincipal">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+     
+      </ul>
+      <div class="buscador">
+        <div class="input_form" id="input_buscar">
+          <input type="text" placeholder="Buscar" required name="buscar" id="buscar">
+        </div>
+        <a href="index.html" class="logoPrincipal">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+
+      </div>
+
+    <!--<a href="./pages/contacto.html">ENCONTRANOS</a>-->
+</header>
     
     <section class="nosotros">
         <h2>quienes somos</h2>
@@ -64,5 +96,63 @@
         </div>
       </section>
 
+
+      <footer class="footer">
+
+        <div class="footerLogo">
+            <section>
+                <a href="index.html">
+                    <img clase="logo" src="../assets/image/Imagen1.png" alt="" width="150px">
+                </a>
+            </section>
+            <nav class="footerContenido">
+                <h3>CONTENIDOS</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="./pages/productos.html">Productos</a></li>
+                    <li><a href="./pages/contacto.html">Contacto</a></li>
+                    <li><a href="./pages/carrito.html">Carrito</a></li>
+                    <li><a href="./pages/nosotros.html">Nosotros</a></li>
+                   
+                </ul>
+            </nav>
+
+
+            <nav class="footerAyuda">
+                <h3>NECESITAS AYUDA</h3>
+                <ul>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Aviso de privacidad</a></li>
+                    <li><a href="#">Terminos y condiciones</a></li>
+                </ul>
+            </nav>
+
+
+
+
+            <div class="footerSuscrib">
+                <h3> SUSCRIBITE A NUESTRO NEWLETTER</h3>
+                <form action="">
+                    <input type="email" placeholder="TU EMAIL" id="emailsuscripcion " name="emailsuscripcion">
+                    <input type="submit" value="SUSCRIBIRME">
+                </form>
+
+                <h3>Conectate con Nosotros</h3>
+                <div class="footerNosotros">
+                    <a href="https://www.facebook.com/" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target=_blank>
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <div class="footerCopy">
+            <p>&copy;2024 Tienda Rock. Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
 </body>
 </html>
