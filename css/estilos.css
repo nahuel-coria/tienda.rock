@@ -165,74 +165,65 @@ a{
 
 
 /* Main */
-
-/* nuestros productos*/
-.secProductos{
-    margin-top: 3rem;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-
-        h2{
-            font-size: 32px;
-            font-weight: 500;
-            color: #333333;
-        }
-}
-/* sec tazas*/
-.secProductos2{
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    justify-content: space-between;
-    
-}
-
-
 .contenedorProductos {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     padding: 20px;
-
-    div {
-        background-color: #fff; 
-        padding: 10px; 
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-        a {
-            display: flex;
-            flex-direction: column;
-            align-items: center; 
-            text-decoration: none; 
-
-            h3 {
-                font-size: 20px;
-                font-weight: 600;
-                color: black;
-            }
-            h4 {
-                font-size: 15px;
-                font-weight: 200;
-                color: black;
-            }
-            p {
-              
-                color: black; 
-            }
-            :hover {
-                color: #ebbb41;
-            }
-        }
-
-    }
-
 }
-/*
+
+.contenedorProductos div {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 7px 7px 15px rgba(204, 153, 51, 0.5);
+    width: 220px; /* Ancho fijo para las tarjetas */
+    height: 350px; /* Alto fijo para las tarjetas */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Para evitar desbordamientos */
+}
+
+.contenedorProductos div img {
+    width: 100%; /* Ocupar todo el ancho del contenedor */
+    height: 250px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Ajustar imagen sin distorsión */
+    border-radius: 5px;
+}
+
+.contenedorProductos div h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    margin: 10px 0 5px;
+}
+
+.contenedorProductos div h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.contenedorProductos div .btnAgregarCarrito {
+    margin-top: auto; /* Empuja el botón hacia la parte inferior */
+    box-shadow: 3px 3px 15px rgba(204, 153, 51, 0.5);
+    padding: 5px 10px;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #f5f5f5;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contenedorProductos div .btnAgregarCarrito:hover {
+    background-color: rgba(204, 153, 51, 0.5);
+    color: white;
+}
+
 
 /* seccion separador envios*/
 .secSeparadorEnvios {
@@ -243,11 +234,12 @@ a{
     background-color: #333333;
     margin: 2rem 0px;
     color: white;
+   
 
-
-        a{
-            color: white !important;
-        }
+    a{
+        color: white !important;
+    }
+       
     
 }
 
@@ -482,8 +474,11 @@ a{
     gap: 20px;
     width: 100%;
     padding: 40px 20px;
-    
-}
+
+}  
+
+
+
 .opiniones{
     display: flex;
     flex-direction: column;
@@ -630,6 +625,7 @@ a{
     align-items: center;
     gap: 20px;
     width: 100%;
+    
 
 
         .separadorTablaTalles{
@@ -642,13 +638,19 @@ a{
             background-color:#91b88c;
             padding: 20px 10px;
             margin: 20px 0;
-
+            background-image: url(../assets/image/imagescala.jpeg);/*no toma la imagen, pendiente arreglar*/
+            background-position: center -550px; 
+            background-size: auto;
+            
             p{
                 color: white;
                 font-size: 1em;
                 width: 50%;
             }
-
+        .detalle{
+            color: #f8f8f8;
+            
+            }
         }
 
         .textoSepadorTalles{
@@ -665,10 +667,29 @@ a{
         align-items: center;
         margin: 30px 0;
         color: black;
-        font-size: 2em;
+        font-size: 2em;  
+        }
+        .Remeras{
+            text-decoration:dashed;
+            display: flex;
+            justify-content: center;
+            height: 6rem;
 
+            padding: 40px 20px;
+            gap: 20px;
+            background-color: #522121;
+            margin: 2rem 0px;
+            color: white;
+            background-image: url(../assets/image/imageoscurecida\ \(2\).webp);
+            background-position: center -550px; 
+            background-size: auto;
+
+
+
+
+        }
     }
-}
+
 
 /* Footer */
 
