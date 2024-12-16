@@ -12,7 +12,7 @@
 
 
 <body>
-    <header class="headerPrincipal">
+    <header class="headerCarrito">
 
         <nav class="contenedorPadreNav"><!-- NAV-->
             <a href="index.html" class="logoPrincipal">
@@ -30,31 +30,25 @@
                 <div class="input_form" id="input_buscar">
                     <input type="text" placeholder="Buscar" required name="buscar" id="buscar">
                 </div>
-                <a href="../index.html" class="logoPrincipal">
-                    <i class="fas fa-shopping-cart"></i>
+                <a href="index.html" class="logoPrincipal">
+                    <i class="fas fa-shopping-cart" alt="Carrito de compras"><span id="cuenta-carrito">0</span></i>
                 </a>
 
             </div>
 
         </nav>
 
-        <div class="contenedorTitulo">
+        <div class="contenedorTitulo" style="width: 100%;">
 
-            <h1 class="tituloPrincipal">
-                <span>
-                    Todo lo que Necesitas para
-                </span> <br>
-                <div>
-                    TU PASION ROCKERA
-                </div>
+            <h1 class="tituloPrincipalSecciones">
+              <div>
+                CARRITO
+              </div>
             </h1>
-
-            <p class=" descripcionPrincipal">Descubre nuestra colección de productos rockeros, diseñados para todos los
-                amantes de la música y la cultura
-                rock. </p>
-            <a href="productos.html" class="botonEncontranos"> NUESTROS PRODUCTOS</a>
-
-        </div>
+      
+            
+      
+          </div>
 
 
         <!--<a href="./pages/contacto.html">ENCONTRANOS</a>-->
@@ -62,67 +56,11 @@
 
 
     <main>
-        <h1>Carrito</h1>
-        <h2>Bienvenidos alcarrito de compras</h2>
-        <p>La mejor tienda para fanáticos del rock y la cultura alternativa. Descubre nuestras remeras y tazas con los
-            diseños más exclusivos de tus bandas favoritas.</p>
-        </h>
-        <section class="intro">
-
-
-            <a href="productos.html" class="btn-explorar">Explorar Productos</a>
-        </section>
-
-        <!-- etiquetas para la tabla -->
-        <table>
-
-            <thead>
-                <!-- etiquetas para la fila de cabecera -->
-                <tr>
-                    <!--celdas de los titulos de cabecera-->
-                    <th>Producto</th>
-                    <th>Cantidad</th>
-                    <th>Precio</th>
-                    <th>Subtotal</th>
-                    <th></th>
-                </tr>
-            </thead>
-
-            <tbody>
-
-                <tr>
-                    <td>Remera Metallica</td>
-                    <td>4</td>
-                    <td>$1500</td>
-                    <td>6000</td>
-                </tr>
-                <tr>
-                    <td>Remera Askin alexandria</td>
-                    <td>2</td>
-                    <td>$22.000</td>
-                    <td>$44.000</td>
-                </tr>
-                <tr>
-                    <td>Remera El maravilloso mundo de Jack</td>
-                    <td>3</td>
-                    <td>$22.000</td>
-                    <td>$44.000</td>
-                </tr>
-                <tr>
-                    <td>Remera The Smith</td>
-                    <td>2</td>
-                    <td>$25.000</td>
-                    <td>$50.000</td>
-                </tr>
-                <tr>
-                    <th colspan="2">Total</th>
-
-
-                </tr>
-
-            </tbody>
-        </table>
-
+        <h1>Carrito de Compras</h1>
+        <div id="lista-carrito">
+            <!-- Los productos se cargarán aquí -->
+        </div>
+        
 
     </main>
     <footer class="footer">
@@ -182,6 +120,8 @@
         </div>
 
     </footer>
+
+    <script src="../js/script.js"></script>
 </body>
 
 </html>
