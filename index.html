@@ -15,28 +15,30 @@
 <body>
     <header class="headerPrincipal">
 
-        <nav class="contenedorPadreNav"><!-- NAV-->
+        <nav class="contenedorPadreNav">
             <a href="index.html" class="logoPrincipal">
-                <img clase="logo" src="./assets/image/Imagen1.png" alt="" width="120px">
+                <img class="logo" src="./assets/image/Imagen1.png" alt="" width="120px">
             </a>
+    
+            <!-- Botón menú hamburguesa -->
+            <button class="menuHamburguesa" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+    
+            <!-- Menú principal -->
             <ul class="menuPrincipal">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="./pages/nosotros.html">Nosotros</a></li>
                 <li><a href="./pages/productos.html">Productos</a></li>
                 <li><a href="./pages/carrito.html">Carrito</a></li>
                 <li><a href="./pages/contacto.html">Contacto</a></li>
-                
             </ul>
+    
             <div class="buscador">
-                <div class="input_form" id="input_buscar">
-                    <input type="text" placeholder="Buscar" required name="buscar" id="buscar">
-                </div>
                 <a href="index.html" class="logoPrincipal">
                     <i class="fas fa-shopping-cart" alt="Carrito de compras"><span id="cuenta-carrito">0</span></i>
                 </a>
-
             </div>
-
         </nav>
 
         <div class="contenedorTitulo">

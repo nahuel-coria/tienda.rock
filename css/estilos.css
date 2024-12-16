@@ -60,63 +60,65 @@ a{
 
 
 /* Header */
-
-.headerPrincipal { 
+.headerPrincipal {
     background-image: url(../assets/image/image.webp);
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
-    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     color: white;
-    height: 100vh; /* Altura completa de la ventana */
-    
+    height: 100vh;
 }
 
-.logo{
-        img{
-            width: 100px;
-        }
-    }
+.headernosotros {
+    background-image: url(../assets/image/fondoNosotrosOscu.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+}
 
-.contenedorPadreNav{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 60px;
-        height: 15%;
-    }
+.headerCarrito {
+    background-image: url(../assets/image/carrito\ Fpndo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+}
 
-    /* Estilo del nav al hacer scroll */
+.logo {
+    margin-top: 20px;
+    img {
+        width: 100px;
+    }
+}
+
+
+.contenedorPadreNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    height: 15%;
+    position: relative; /* Necesario para el posicionamiento del menú desplegable */
+}
+
+/* Estilo del nav al hacer scroll */
 .navFijo {
-    position: fixed; /* Fija el nav en la parte superior */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
-    backdrop-filter: blur(10px); /* Aplica el desenfoque en el fondo */
-    transition: background-color 0.3s ease; /* Transición suave */
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
     z-index: 1000;
 }
-.headernosotros{
-    background-image: url(../assets/image/fondoNosotrosOscu.png);
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
-    background-position: center; /* Centra la imagen en el contenedor */
-    color: white;
-    height: 100vh;
 
-}
-.headerCarrito{
-    background-image: url(../assets/image/carrito\ Fpndo.png);
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
-    background-position: center; /* Centra la imagen en el contenedor */
-    color: white;
-    height: 100vh;
-
-}
-
-.contenedorTitulo{
+/* Contenedor del título */
+.contenedorTitulo {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -124,83 +126,80 @@ a{
     gap: 10px;
     height: 85%;
     padding-top: 2rem;
-    h1{
-        font-family: "Oswald","Playwrite DE Grund", cursive;;
-        font-size: 40px;
-        font-weight: 400;
-    }
-    h1 span {
-        font-size: 31px;
-    }
-    h1 div {
-        color: #ebbb41;
-        font-size: 45px;
-    }
     padding-left: 5rem;
-
-    .tituloPrincipalSecciones{
-        display: flex;
-        height: 60%;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-
-        div{
-            font-size: 5rem;
-            padding-right: 30px;
-        }
-    }
-
-
 }
-.botonEncontranos{
+
+.contenedorTitulo h1 {
+    font-family: "Oswald", "Playwrite DE Grund", cursive;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.contenedorTitulo h1 span {
+    font-size: 31px;
+}
+
+.contenedorTitulo h1 div {
+    color: #ebbb41;
+    font-size: 45px;
+}
+
+.botonEncontranos {
     padding: 15px;
     margin-top: 20px;
     border: 2px solid white;
     border-radius: 5px;
-    color: white;   
+    color: white;
 }
 
-.botonEncontranos:hover{
+.botonEncontranos:hover {
     color: #ebbb41;
     border: 2px solid #ebbb41;
 }
 
-.buscador{
+.buscador {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
     padding-right: 6rem;
-    
-    a i{
-        color: white;
-        font-size: 1.7rem;
-    }
-    input{
-        padding: 3px;
-        border-radius: 5px;
-    }
-    a i:hover{
-        color: #ebbb41;
-    }
-    
 }
 
-.menuPrincipal{
-    
+.buscador a i {
+    color: white;
+    font-size: 1.7rem;
+}
+
+.buscador a i:hover {
+    color: #ebbb41;
+}
+
+.menuPrincipal {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     list-style: none;
     gap: 35px;
     color: white;
     font-size: 20px;
-    li a{
-        color: white;   }
-    a:hover{
-        color: #ebbb41;
-        text-decoration: none ;
-    }
+}
+
+.menuPrincipal li a {
+    color: white;
+}
+
+.menuPrincipal li a:hover {
+    color: #ebbb41;
+    text-decoration: none;
+}
+
+/* Botón menú hamburguesa */
+.menuHamburguesa {
+    display: none; /* Oculto por defecto */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
 }
 
 
@@ -275,6 +274,63 @@ a{
     background-color: rgba(204, 153, 51, 0.5);
     color: white;
 }
+
+/* CARRITO */
+
+/* Tabla de carrito */
+.carrito-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.carrito-tabla thead {
+    background-color: #f4f4f4;
+}
+
+.carrito-tabla th,
+.carrito-tabla td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.carrito-tabla th {
+    font-weight: bold;
+}
+
+.carrito-tabla .carrito-img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.carrito-tabla .carrito-cantidad {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.carrito-tabla button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.carrito-tabla button:hover {
+    background-color: #e55c4d;
+}
+
+.carrito-tabla .carrito-btn-eliminar {
+    background-color: #d9534f;
+}
+
+.carrito-tabla .carrito-btn-eliminar:hover {
+    background-color: #c9302c;
+}
+
 
 
 /* seccion separador envios*/
@@ -961,8 +1017,51 @@ a{
     height 200px;
     /*background-image: linear-gradient(to right top, #b5b2cd, #babbd2, #c1c4d6, #c8cdda, #d1d5de, #cfd4da, #cdd2d7, #ccd0d3, #bfc5c7, #b3b9bb, #a7aeaf, #9ba3a2);*/
 }
-@media screen and (min-width: 768px){
 
+/* Media Queries para pantallas móviles */
+@media (max-width: 768px) {
+    .contenedorPadreNav {
+        padding: 10px 20px;
+        margin-right: 30px;
+    }
 
+    .menuHamburguesa {
+        display: block; /* Mostrar botón hamburguesa en móvil */
+    }
 
-}
+    .menuPrincipal {
+        display: none; /* Ocultar menú inicialmente */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        gap: 15px;
+    }
+
+    .menuPrincipal.activo {
+        display: flex; /* Mostrar menú cuando está activo */
+    }
+
+    .menuPrincipal li a {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .buscador {
+        padding-right: 0;
+    }
+
+    .contenedorTitulo{
+        width: 90%;
+    }
+    .contenedorTitulo h1 div{
+        margin-top: 20px;
+    }
+
+    
+    }
