@@ -1062,6 +1062,31 @@ a{
     .contenedorTitulo h1 div{
         margin-top: 20px;
     }
+    .secSeparadorEnvios{
+        flex-direction: column;
+    }
+    .secProductos{
+        h2{
+            font-size: 30px;
+        }
+    }
+    .contenidoSeccion {
+        h2{
+            display: none !important;
+        }
+        h3{
+            font-size: 20px;
+        }
 
-    
+    }
+    .footer{
+
+        background-image: none !important;
+        height: 100%;
+        .footerLogo{
+            flex-direction: column !important;
+        }
+
+    }
+
     }
