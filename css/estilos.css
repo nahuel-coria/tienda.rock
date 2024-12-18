@@ -580,7 +580,6 @@ a{
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    width: 100%;
     padding: 40px 20px;
     .franjaNosotros{
         background-color: #f9f9f9;
@@ -789,7 +788,6 @@ a{
             display: flex;
             justify-content: center;
             flex-direction: column;
-            width: 100%;
             min-height: 7rem;/*modificar*/
             gap: 10px;
             align-items: center;
