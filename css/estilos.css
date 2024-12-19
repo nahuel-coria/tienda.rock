@@ -192,6 +192,22 @@ a{
     text-decoration: none;
 }
 
+/* Titulo de secciones */
+
+.contenedorTituloSecciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65%;
+}
+
+.tituloPrincipalSecciones{
+    color: #ebbb41;
+    font-family: "Oswald", "Playwrite DE Grund", cursive;
+    font-size: 45px;
+    font-weight: 400;
+}
+
 /* Botón menú hamburguesa */
 .menuHamburguesa {
     display: none; /* Oculto por defecto */
@@ -917,7 +933,7 @@ a{
     background-repeat: no-repeat; 
     background-size: cover;
     
-    background-position: center -600px; 
+    background-position: center -400px; 
     /*background-attachment: fixed;  Esto hace que la imagen se mantenga fija */
     height: 40vh; /* Altura del footer para que ocupe toda la pantalla */
     
