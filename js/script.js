@@ -10,7 +10,124 @@ window.addEventListener('scroll', () => {
     }
 });
 
-/*  Carrito */
+/* Carrito */
+
+// Esta parte del código se ejecutará cuando la página esté completamente cargada
+document.addEventListener("DOMContentLoaded", () => {
+    // Verifica si estamos en la página del carrito
+    if (window.location.pathname.includes("carrito")) {
+        const listaCarrito = document.getElementById("lista-carrito");
+        const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+        const cuentaCarritoElement = document.getElementById("cuenta-carrito");
+
+        // Función para renderizar el carrito
+        function renderizarCarrito() {
+            listaCarrito.innerHTML = ""; // Limpia la tabla
+
+            if (carrito.length === 0) {
+                listaCarrito.innerHTML = "<p>El carrito está vacío.</p>";
+            } else {
+                const table = document.createElement("table");
+                table.classList.add("carrito-tabla");
+
+                table.innerHTML = `
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Total</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                `;
+
+                const tbody = table.querySelector("tbody");
+
+                carrito.forEach((producto, index) => {
+                    const total = parseInt(producto.precio.replace("$", "").replace(".", "")) * producto.cantidad;
+
+                    const fila = document.createElement("tr");
+                    fila.classList.add("carrito-fila");
+                    fila.innerHTML = `
+                        <td>
+                            <img src="${producto.imagen}" alt="${producto.nombre}" class="carrito-img">
+                            ${producto.nombre}
+                        </td>
+                        <td>${producto.precio}</td>
+                        <td>
+                            <button class="carrito-btn-restar" data-index="${index}">-</button>
+                            <span class="carrito-cantidad">${producto.cantidad}</span>
+                            <button class="carrito-btn-sumar" data-index="${index}">+</button>
+                        </td>
+                        <td>$${total.toLocaleString()}</td>
+                        <td>
+                            <button class="carrito-btn-eliminar" data-index="${index}">Eliminar</button>
+                        </td>
+                    `;
+                    tbody.appendChild(fila);
+                });
+
+                listaCarrito.appendChild(table);
+            }
+
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            actualizarContador();
+        }
+
+        // Verifica si listaCarrito existe antes de agregar eventos
+        if (listaCarrito) {
+            // Evento para sumar cantidad
+            listaCarrito.addEventListener("click", (e) => {
+                if (e.target.classList.contains("carrito-btn-sumar")) {
+                    const index = e.target.dataset.index;
+                    carrito[index].cantidad += 1;
+                    renderizarCarrito();
+                }
+            });
+
+            // Evento para restar cantidad
+            listaCarrito.addEventListener("click", (e) => {
+                if (e.target.classList.contains("carrito-btn-restar")) {
+                    const index = e.target.dataset.index;
+                    if (carrito[index].cantidad > 1) {
+                        carrito[index].cantidad -= 1;
+                    } else {
+                        carrito.splice(index, 1); // Eliminar si la cantidad llega a 0
+                    }
+                    renderizarCarrito();
+                }
+            });
+
+            // Evento para eliminar un producto
+            listaCarrito.addEventListener("click", (e) => {
+                if (e.target.classList.contains("carrito-btn-eliminar")) {
+                    const index = e.target.dataset.index;
+                    carrito.splice(index, 1);
+                    renderizarCarrito();
+                }
+            });
+        } else {
+            console.log("No se encuentra el elemento lista-carrito.");
+        }
+
+        // Función para actualizar el contador del carrito
+        function actualizarContador() {
+            let cuenta = 0;
+            const memoria = JSON.parse(localStorage.getItem("carrito"));
+            if (memoria && memoria.length > 0) {
+                cuenta = memoria.reduce((acum, current) => acum + current.cantidad, 0);
+            }
+            cuentaCarritoElement.innerText = cuenta;
+        }
+
+        // Inicializar el carrito
+        renderizarCarrito();
+    }
+});
+
+/* Agregar al carrito en otras páginas */
 
 document.addEventListener("DOMContentLoaded", () => {
     const botonesAgregar = document.querySelectorAll(".btnAgregarCarrito");
@@ -54,123 +171,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Escucha cambios globales del carrito y actualiza el contador
     document.addEventListener("carritoActualizado", actualizarContador);
 });
-
-/* Lógica de carrito de página Carrito */
-
-document.addEventListener("DOMContentLoaded", () => {
-    const listaCarrito = document.getElementById("lista-carrito");
-    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
-    // Función para renderizar el carrito
-    function renderizarCarrito() {
-        listaCarrito.innerHTML = ""; // Limpia la tabla
-
-        if (carrito.length === 0) {
-            listaCarrito.innerHTML = "<p>El carrito está vacío.</p>";
-        } else {
-            const table = document.createElement("table");
-            table.classList.add("carrito-tabla");
-
-            table.innerHTML = `
-                <thead>
-                    <tr>
-                        <th>Producto</th>
-                        <th>Precio</th>
-                        <th>Cantidad</th>
-                        <th>Total</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            `;
-
-            const tbody = table.querySelector("tbody");
-
-            carrito.forEach((producto, index) => {
-                const total = parseInt(producto.precio.replace("$", "").replace(".", "")) * producto.cantidad;
-
-                const fila = document.createElement("tr");
-                fila.classList.add("carrito-fila");
-                fila.innerHTML = `
-                    <td>
-                        <img src="${producto.imagen}" alt="${producto.nombre}" class="carrito-img">
-                        ${producto.nombre}
-                    </td>
-                    <td>${producto.precio}</td>
-                    <td>
-                        <button class="carrito-btn-restar" data-index="${index}">-</button>
-                        <span class="carrito-cantidad">${producto.cantidad}</span>
-                        <button class="carrito-btn-sumar" data-index="${index}">+</button>
-                    </td>
-                    <td>$${total.toLocaleString()}</td>
-                    <td>
-                        <button class="carrito-btn-eliminar" data-index="${index}">Eliminar</button>
-                    </td>
-                `;
-                tbody.appendChild(fila);
-            });
-
-            listaCarrito.appendChild(table);
-        }
-
-        localStorage.setItem("carrito", JSON.stringify(carrito));
-        actualizarContador();
-    }
-
-    // Evento para sumar cantidad
-    listaCarrito.addEventListener("click", (e) => {
-        if (e.target.classList.contains("carrito-btn-sumar")) {
-            const index = e.target.dataset.index;
-            carrito[index].cantidad += 1;
-            renderizarCarrito();
-          
-
-        }
-    });
-
-    // Evento para restar cantidad
-    listaCarrito.addEventListener("click", (e) => {
-        if (e.target.classList.contains("carrito-btn-restar")) {
-            const index = e.target.dataset.index;
-            if (carrito[index].cantidad > 1) {
-                carrito[index].cantidad -= 1;
-            } else {
-                carrito.splice(index, 1); // Eliminar si la cantidad llega a 0
-            }
-            renderizarCarrito();
-          
-
-            
-
-        }
-    });
-
-    // Evento para eliminar un producto
-    listaCarrito.addEventListener("click", (e) => {
-        if (e.target.classList.contains("carrito-btn-eliminar")) {
-            const index = e.target.dataset.index;
-            carrito.splice(index, 1);
-            renderizarCarrito();
-           
-
-        }
-    });
-
-    // Función para actualizar el contador del carrito
-    function actualizarContador() {
-        let cuenta = 0;
-        const memoria = JSON.parse(localStorage.getItem("carrito"));
-        if(memoria && memoria.length > 0){
-            cuenta = memoria.reduce((acum, current)=>acum+current.cantidad,0)
-            return cuentaCarritoElement.innerText = cuenta;
-        }
-        cuentaCarritoElement.innerText = 0;
-    }
-
-    // Inicializar el carrito
-    renderizarCarrito();
-});
-
 
 /* Nav Mobile */
 
