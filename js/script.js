@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const index = e.target.dataset.index;
             carrito[index].cantidad += 1;
             renderizarCarrito();
-            location.reload();
+          
 
         }
     });
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 carrito.splice(index, 1); // Eliminar si la cantidad llega a 0
             }
             renderizarCarrito();
-            location.reload();
+          
 
             
 
@@ -151,19 +151,20 @@ document.addEventListener("DOMContentLoaded", () => {
             const index = e.target.dataset.index;
             carrito.splice(index, 1);
             renderizarCarrito();
-            location.reload();
+           
 
         }
     });
 
     // Función para actualizar el contador del carrito
     function actualizarContador() {
-        const totalProductos = carrito.reduce((acc, item) => acc + item.cantidad, 0);
-        const contadorCarrito = document.getElementById("cuenta-carrito");
-        contadorCarrito.textContent = totalProductos;
-
-        // Lanzar evento global
-        document.dispatchEvent(new Event("carritoActualizado"));
+        let cuenta = 0;
+        const memoria = JSON.parse(localStorage.getItem("carrito"));
+        if(memoria && memoria.length > 0){
+            cuenta = memoria.reduce((acum, current)=>acum+current.cantidad,0)
+            return cuentaCarritoElement.innerText = cuenta;
+        }
+        cuentaCarritoElement.innerText = 0;
     }
 
     // Inicializar el carrito
