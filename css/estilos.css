@@ -1077,7 +1077,6 @@ a{
         flex-direction: column;
         position: absolute;
         top: 100%;
-        right: 0;
         background-color: rgba(0, 0, 0, 0.9);
         width: 100%;
         padding: 20px;
