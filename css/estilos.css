@@ -87,6 +87,15 @@ a{
     
 }
 
+.headerContacto {
+    background-image: url(../assets/image/image.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+}
+
 
 
 .headerCarrito {
@@ -1078,22 +1087,31 @@ a{
         position: absolute;
         top: 100%;
         background-color: rgba(0, 0, 0, 0.9);
-        width: 100%;
+        width: 120%;
         padding: 20px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         z-index: 1000;
         gap: 15px;
+        margin-left: -20px;
     }
 
     .menuPrincipal.activo {
-        display: flex; /* Mostrar menú cuando está activo */
+        display: flex;
     }
 
     .menuPrincipal li a {
         font-size: 18px;
         text-align: center;
     }
+    
+    .navFijo {
+    
 
+        .buscador{
+            margin-right: 55px;
+        }
+        
+    }
     .buscador {
         padding-right: 0;
     }
