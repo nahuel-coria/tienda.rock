@@ -77,6 +77,17 @@ a{
     color: white;
     height: 100vh;
 }
+.headerproductos{
+    background-image: url(../assets/image/fondo\ productos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+    
+}
+
+
 
 .headerCarrito {
     background-image: url(../assets/image/carrito\ Fpndo.png);
@@ -346,6 +357,21 @@ a{
 .carrito-tabla .carrito-btn-eliminar:hover {
     background-color: #c9302c;
 }
+#lista-carrito{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+        p{
+            
+            font-size: 27px;
+            margin-bottom: 10px;
+            color: rgb(224, 82, 82);
+            font-weight: 700;
+        }
+}
 
 
 
@@ -569,7 +595,10 @@ a{
     width: 100%;
     padding: 40px 20px;
     h1{
-        color:black;
+        font-size: 2em;
+        color: #333;
+        text-align: center;
+        font-weight: 600;
 
     }
     .contactoform{
@@ -933,7 +962,7 @@ a{
     background-repeat: no-repeat; 
     background-size: cover;
     
-    background-position: center -400px; 
+    background-position: center -600px; 
     /*background-attachment: fixed;  Esto hace que la imagen se mantenga fija */
     height: 40vh; /* Altura del footer para que ocupe toda la pantalla */
     
@@ -1082,6 +1111,11 @@ a{
     .secProductos{
         h2{
             font-size: 30px;
+        }
+    }
+    .tablaTalles{
+        .fotoRemera{
+            width: 350px;
         }
     }
     .contenidoSeccion {

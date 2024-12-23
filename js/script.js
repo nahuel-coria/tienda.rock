@@ -1,7 +1,6 @@
 // Selecciona el nav
 const nav = document.querySelector('.contenedorPadreNav');
 
-// Agrega un evento de scroll
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
         nav.classList.add('navFijo');
@@ -12,7 +11,6 @@ window.addEventListener('scroll', () => {
 
 /* Carrito */
 
-// Esta parte del código se ejecutará cuando la página esté completamente cargada
 document.addEventListener("DOMContentLoaded", () => {
     // Verifica si estamos en la página del carrito
     if (window.location.pathname.includes("carrito")) {
@@ -20,9 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
         const cuentaCarritoElement = document.getElementById("cuenta-carrito");
 
-        // Función para renderizar el carrito
         function renderizarCarrito() {
-            listaCarrito.innerHTML = ""; // Limpia la tabla
+            listaCarrito.innerHTML = ""; 
 
             if (carrito.length === 0) {
                 listaCarrito.innerHTML = "<p>El carrito está vacío.</p>";
@@ -76,9 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
             actualizarContador();
         }
 
-        // Verifica si listaCarrito existe antes de agregar eventos
         if (listaCarrito) {
-            // Evento para sumar cantidad
             listaCarrito.addEventListener("click", (e) => {
                 if (e.target.classList.contains("carrito-btn-sumar")) {
                     const index = e.target.dataset.index;
@@ -87,20 +82,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
 
-            // Evento para restar cantidad
             listaCarrito.addEventListener("click", (e) => {
                 if (e.target.classList.contains("carrito-btn-restar")) {
                     const index = e.target.dataset.index;
                     if (carrito[index].cantidad > 1) {
                         carrito[index].cantidad -= 1;
                     } else {
-                        carrito.splice(index, 1); // Eliminar si la cantidad llega a 0
+                        carrito.splice(index, 1); 
                     }
                     renderizarCarrito();
                 }
             });
 
-            // Evento para eliminar un producto
             listaCarrito.addEventListener("click", (e) => {
                 if (e.target.classList.contains("carrito-btn-eliminar")) {
                     const index = e.target.dataset.index;
@@ -112,7 +105,6 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("No se encuentra el elemento lista-carrito.");
         }
 
-        // Función para actualizar el contador del carrito
         function actualizarContador() {
             let cuenta = 0;
             const memoria = JSON.parse(localStorage.getItem("carrito"));
@@ -122,7 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
             cuentaCarritoElement.innerText = cuenta;
         }
 
-        // Inicializar el carrito
         renderizarCarrito();
     }
 });
@@ -133,42 +124,35 @@ document.addEventListener("DOMContentLoaded", () => {
     const botonesAgregar = document.querySelectorAll(".btnAgregarCarrito");
     const contadorCarrito = document.getElementById("cuenta-carrito");
 
-    // Inicializar el carrito desde el localStorage
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     actualizarContador();
 
-    // Agregar eventos a los botones de agregar al carrito
     botonesAgregar.forEach((boton) => {
         boton.addEventListener("click", (event) => {
             event.preventDefault();
 
-            // Obtener información del producto
             const producto = boton.closest("div");
             const nombre = producto.querySelector("h3").textContent;
             const precio = producto.querySelector("h4").textContent;
             const imagen = producto.querySelector("img").src;
 
-            // Verificar si el producto ya está en el carrito
             const index = carrito.findIndex((item) => item.nombre === nombre);
             if (index !== -1) {
-                carrito[index].cantidad += 1; // Incrementar cantidad
+                carrito[index].cantidad += 1; 
             } else {
-                carrito.push({ nombre, precio, imagen, cantidad: 1 }); // Agregar nuevo producto
+                carrito.push({ nombre, precio, imagen, cantidad: 1 }); 
             }
 
-            // Guardar en localStorage y actualizar contador
             localStorage.setItem("carrito", JSON.stringify(carrito));
             actualizarContador();
         });
     });
 
-    // Función para actualizar el contador del carrito
     function actualizarContador() {
         const totalProductos = carrito.reduce((acc, item) => acc + item.cantidad, 0);
         contadorCarrito.textContent = totalProductos;
     }
 
-    // Escucha cambios globales del carrito y actualiza el contador
     document.addEventListener("carritoActualizado", actualizarContador);
 });
 
@@ -179,10 +163,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuPrincipal = document.querySelector(".menuPrincipal");
 
     menuHamburguesa.addEventListener("click", () => {
-        menuPrincipal.classList.toggle("activo"); // Activa/desactiva el menú
+        menuPrincipal.classList.toggle("activo"); 
     });
 
-    // Opcional: Cerrar menú al hacer clic en un enlace
     menuPrincipal.addEventListener("click", (e) => {
         if (e.target.tagName === "A") {
             menuPrincipal.classList.remove("activo");
